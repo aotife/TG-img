@@ -350,3 +350,17 @@ $.ajax({
         console.error('请求失败');
     }
 });
+
+
+// 发起 AJAX 请求
+$.ajax({
+    url: '/ip',
+    method: 'GET',
+    success: function (data) {
+        $('#ipinfo').text(data.ip);
+    },
+    error: function () {
+        $('#ipinfo').text("?");
+        console.error('请求失败');
+    }
+});
